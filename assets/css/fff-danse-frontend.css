@@ -1,0 +1,176 @@
+/* assets/css/fff-danse-frontend.css */
+
+.fff-danse-single {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 1.5rem 1rem 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #222;
+}
+
+.fff-danse-player {
+    margin-bottom: 2.5rem;
+}
+
+/* Topnavigation: Intro / Se / Lær / Dans */
+
+.fff-danse-video-nav {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.fff-danse-mode-btn {
+    border: 1px solid #d0d0d0;
+    background: #fafafa;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.fff-danse-mode-btn.is-active {
+    background: #273c4c;
+    border-color: #273c4c;
+    color: #fff;
+}
+
+/* Vinkel-navigation (ikoner) */
+
+.fff-danse-angle-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+    min-height: 2rem;
+}
+
+.fff-danse-angle-nav.is-empty {
+    display: none;
+}
+
+.fff-danse-angle-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.fff-danse-angle-btn svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.fff-danse-angle-btn.is-active {
+    background: #f2f5f8;
+    border-color: #273c4c;
+    color: #273c4c;
+    transform: translateY(-1px);
+}
+
+/* Video container – responsiv 16:9 */
+
+.fff-danse-video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fff-danse-video-inner {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.fff-danse-video-inner.is-visible {
+    opacity: 1;
+}
+
+.fff-danse-video-inner iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Metadata sektioner */
+
+.fff-danse-meta-sections {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fff-danse-meta-group {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.25rem;
+}
+
+.fff-danse-meta-heading {
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #444;
+    margin: 0 0 0.75rem;
+}
+
+.fff-danse-meta-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 0.4rem 1.25rem;
+    margin: 0;
+}
+
+.fff-danse-meta-label {
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.fff-danse-meta-value {
+    margin: 0;
+    color: #444;
+}
+
+/* Originalt indhold */
+
+.fff-danse-original-content {
+    margin-top: 3rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+}
+
+/* Responsivitet */
+
+@media (max-width: 900px) {
+    .fff-danse-single {
+        padding-inline: 1rem;
+    }
+
+    .fff-danse-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .fff-danse-video-nav {
+        justify-content: center;
+    }
+
+    .fff-danse-angle-nav {
+        justify-content: center;
+    }
+}
